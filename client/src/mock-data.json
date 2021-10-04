@@ -1,0 +1,35 @@
+[
+    {  
+      "fullName": "Luke Skywalker",
+      "interests": "space travel",
+      "phoneNumber": "011-962-111",
+      "email": "luke@airwalk.com"
+    },
+    {
+        "fullName": "Pallas Athene",
+        "interests": "astronomy",
+        "phoneNumber": "777-111-333",
+        "email": "athene@mystery.com"
+    },
+    {
+        
+        "fullName": "Royal Aldebaran",
+        "interests": "star gazing",
+        "phoneNumber": "888-999-555",
+        "email": "galaxy@air.com"
+    },
+    {
+        
+        "fullName": "Jacob Weisz",
+        "interests": "music",
+        "phoneNumber": "234-567-098",
+        "email": "jay@music.com"
+    },
+    {
+        
+        "fullName": "God Atlas",
+        "interests": "weight lifting",
+        "phoneNumber": "555-555-555",
+        "email": "zeus@lift.com"
+    }
+  ]
