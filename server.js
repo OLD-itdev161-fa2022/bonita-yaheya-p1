@@ -4,7 +4,7 @@ import { check, validationResult } from 'express-validator';
 import cors from 'cors';
 
 //Initialize express application
-const app = express();
+const app = express('public');
 
 //Connect connectDatabase
 connectDatabase();
@@ -19,9 +19,12 @@ app.use(
 
 //API endpoints
 /**
- * @route GET /
+ * @route GET //Http Methods: POST, GET, PUT, DELETE 
+ *            //CRUD : CREATE, READ, UPDATE, DELETE
  * @desc Test endpoint
  */
+
+
 app.get('/', (req, res) =>
     res.send('http get request sent to root api endpoint')
 
@@ -34,7 +37,9 @@ app.post('/api/users',
     [
         check('name', 'Please enter your name').not().isEmpty(),
         check('email', 'Please enter a valid email').isEmail(),
-        check('password', 'Please enter a password with 6 or more characters').isLength({ min: 6 })
+        check('password', 'Please enter a password with 6 or more characters').isLength({ min: 6 }),
+        check('age', 'Please enter a valid age').not().isEmpty()
+    
 
     ],
 

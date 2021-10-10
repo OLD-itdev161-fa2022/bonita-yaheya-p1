@@ -9,8 +9,8 @@ header {
   padding: 0.25em;
   background-color: #cec218;
   color: rgb(56, 34, 8);
-  display: grid;
-  font-size: 28px;
+  display: flex;
+  font-size: 26px;
   font-style: italic;
   font-weight: bold;
   place-content: center;
@@ -26,7 +26,7 @@ td {
   border: 1px solid #ffffff;
   text-align: left;
   padding: 8px;
-  font-size: 28px;
+  font-size: 26px;
   font-style: italic;
 }
 
@@ -49,7 +49,7 @@ form td:last-child {
 }
 
 form * {
-  font-size: 28px;
+  font-size: 26px;
 }
 
 footer {
@@ -57,23 +57,9 @@ footer {
   padding: 0.25em;
   background-color: #cec218;
   color: rgb(56, 34, 8);
-  display: grid;
-  font-size: 28px;
+  display: flex;
+  font-size: 26px;
   font-style: italic;
   font-weight: bold;
   place-content: center;
-}
-
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
 }

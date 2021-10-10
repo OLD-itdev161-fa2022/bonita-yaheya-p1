@@ -4,8 +4,7 @@ import React from 'react';
 const Header = () => {
     return (
         <header>
-
-            <h1>Fun Table Info</h1>
+            <h1>Data Table</h1>
         </header>
     )
 }

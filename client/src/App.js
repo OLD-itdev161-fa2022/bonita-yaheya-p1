@@ -1,6 +1,6 @@
-import {useState} from 'react';
+import React, {useState} from 'react';
 import './index.css';
-import data from "./mock-data.json";
+import data from './mock-data.json';
 import Header from './components/ui/Header';
 import Footer from './components/ui/Footer';
 
@@ -12,9 +12,11 @@ const App = () => {
     interests:'',
     phoneNumber:'',
     email:'',
+
+    
   });
 
-  const handleAddFormChange = event => {
+  const handleAddFormChange = (event) => {
     event.preventDefault();
 
     const fieldName = event.target.getAttribute('name');
@@ -25,28 +27,30 @@ const App = () => {
 
     setAddFormData(newFormData);
 
-
-  }
+  };
   const handleAddFormSubmit = (event) => {
     event.preventDefault();
 
     const newContact = {
       fullName: addFormData.fullName,
       interests: addFormData.interests,
-      phoneNumber: addFormData.phone,
+      phoneNumber: addFormData.phoneNumber,
       email: addFormData.email,
     };
 
     const newContacts = [...contacts, newContact];
     setContacts(newContacts);
+    
 
   };
+  
 
   return (
-  <>
-  <Header/>
-    
+   <> 
+      <Header />           
+
     <div className='app-container'>
+      <form>
       <table>
         <thead>
           <tr>
@@ -57,18 +61,21 @@ const App = () => {
           </tr>
           </thead>
           <tbody>
-            {contacts.map((contact) => (
+          {contacts.map((contact) =>  (
+          
             <tr>
-              <td>{contact.fullName}</td>
-              <td>{contact.interests}</td>
-              <td>{contact.phoneNumber}</td>
-              <td>{contact.email}</td>
-
-
-            </tr>
-))}
+            <td>{contact.fullName}</td>
+            <td>{contact.interests}</td>
+            <td>{contact.phoneNumber}</td>
+            <td>{contact.email}</td>
+       </tr>
+        
+          ))}     
+          
         </tbody>
       </table>
+      </form>
+
       <h2>Add new Contact</h2>
       <form onSubmit = {handleAddFormSubmit}>
         <input
@@ -87,7 +94,7 @@ const App = () => {
         />
         <input
         type="text"
-        name="phone"
+        name="phoneNumber"
         required="required"
         placeholder="Please enter a phone number..."
         onChange={handleAddFormChange}
@@ -99,16 +106,16 @@ const App = () => {
         placeholder="Please enter an email..."
         onChange={handleAddFormChange}
         />
-        <button type="submit">Add</button>
+
+        <button type="submit">ADD</button>
+        
         </form>
+        </div>
         <Footer />
-      </div>
+        </>
       
-      
-     
-   </>  
-  )
-}
+  ); 
+};
 
 
 export default App;
