@@ -3,6 +3,8 @@ import './index.css';
 import data from './mock-data.json';
 import Header from './components/ui/Header';
 import Footer from './components/ui/Footer';
+import Typography from '@material-ui/core/Typography';
+
 
 const App = () => {
   
@@ -47,7 +49,9 @@ const App = () => {
 
   return (
    <> 
-      <Header />           
+   <Typography>
+      <Header /> 
+   </Typography>          
 
     <div className='app-container'>
       <form>
@@ -106,12 +110,14 @@ const App = () => {
         placeholder="Please enter an email..."
         onChange={handleAddFormChange}
         />
-
-        <button type="submit">ADD</button>
+        
+        <button type="submit"> Add </button>
+       
         
         </form>
         </div>
         <Footer />
+
         </>
       
   ); 
